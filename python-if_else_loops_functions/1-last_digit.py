@@ -6,9 +6,8 @@ if number < 0:
     number2 = -(-number % 10)
 else:
 	number2 = number % 10
-
 if (number2 > 5):
-    print(f"Last digit of {number} is {number2} and is greater than 5")
+	print(f"Last digit of {number} is {number2} and is greater than 5")
 elif (number2 == 0):
     print(f"Last digit of {number} is {number2} and is 0")
 else:
