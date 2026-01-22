@@ -20,5 +20,3 @@ def roman_to_int(roman_string):
             total += current_value
     
     return total
-
-    
