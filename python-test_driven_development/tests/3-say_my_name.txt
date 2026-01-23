@@ -1,0 +1,54 @@
+Test file for say_my_name function
+==================================
+
+First, import the function:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test present: firstname= string / lastname= string
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+Test present: firstname= string / lastname= not string => TypeError: last_name must be a string
+    >>> say_my_name("John", 123)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name("John", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name("John", ["Smith"])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Test present: firstname= not string / lastname= string => TypeError: first_name must be a string
+    >>> say_my_name(123, "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(None, "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(["John"], "Smith")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test present: missing two arguments
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+    
