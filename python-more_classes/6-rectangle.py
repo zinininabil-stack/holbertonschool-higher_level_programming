@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 """Module that defines a Rectangle class"""
 
+
 class Rectangle:
     """Class that defines a rectangle
     
     Attributes:
         number_of_instances (int): Number of Rectangle instances
+        print_symbol: Symbol used for string representation
     """
     
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -59,7 +62,7 @@ class Rectangle:
             return ""
         rectangle = []
         for i in range(self.__height):
-            rectangle.append("#" * self.__width)
+            rectangle.append(str(self.print_symbol) * self.__width)
         return "\n".join(rectangle)
 
     def __repr__(self):
@@ -70,3 +73,4 @@ class Rectangle:
         """Print a message when a Rectangle instance is deleted"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+        
